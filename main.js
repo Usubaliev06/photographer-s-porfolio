@@ -6,16 +6,24 @@ const pics = [
   'https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80',
   'https://images.unsplash.com/photo-1627483262112-039e9a0a0f16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
   'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+  'https://images.unsplash.com/photo-1674745843370-244462ab8bb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60'
 ]
+
 
 const images = document.querySelector('.images')
 
 pics.forEach((picture) => {
   const img = document.createElement('img')
+  img.setAttribute('src', './img/Group 1.png')
   images.append(img)
   img.setAttribute('alt', 'porfolio')
-  img.setAttribute('src', picture)
+
+  img.addEventListener('load',()=>{
+    console.log(101)
+      img.setAttribute('src', picture)
+  })
 })
+
 
 
 const img = Array.from(document.querySelectorAll('.images>img'))
@@ -26,8 +34,6 @@ const closePicture = document.querySelector('.close-picture')
 img.forEach((picture) => {
   picture.addEventListener('click', () => {
     const liveImg = document.createElement('img')
-
-
 
     liveImg.setAttribute('src', picture.getAttribute('src'))
     pictureModal.prepend(liveImg)
