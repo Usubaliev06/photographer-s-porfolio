@@ -19,7 +19,6 @@ pics.forEach((picture) => {
   img.setAttribute('alt', 'porfolio')
 
   img.addEventListener('load',()=>{
-    console.log(101)
       img.setAttribute('src', picture)
   })
 })
