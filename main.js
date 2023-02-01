@@ -17,12 +17,18 @@ pics.forEach((picture) => {
   img.setAttribute('src', './img/Group 1.png')
   images.append(img)
   img.setAttribute('alt', 'porfolio')
-  img.setAttribute('src', picture)
+  // img.setAttribute('src', picture)
 
-  // img.addEventListener('load',()=>{
-  //     img.setAttribute('src', picture)
+  // img.addEventListener('load', () => {
+  //   img.setAttribute('src', picture)
+  //   console.log(1)
   // })
-  
+
+  setTimeout(() => {
+    console.log(101)
+    img.setAttribute('src', picture)
+  }, 1000)
+
 })
 
 

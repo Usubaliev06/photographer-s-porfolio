@@ -165,4 +165,10 @@ main {
     height: 165px;
     width: 165px;
   }
+  .contact{
+    width: 200px;
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+
 }
