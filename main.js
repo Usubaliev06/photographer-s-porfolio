@@ -25,7 +25,6 @@ pics.forEach((picture) => {
   // })
 
   setTimeout(() => {
-    console.log(101)
     img.setAttribute('src', picture)
   }, 1000)
 
@@ -81,9 +80,10 @@ let data = {
 }
 
 send.addEventListener('click', () => {
-  data.name = document.querySelector('#input-name').value
-  data.email = document.querySelector('#input-email').value
-  data.message = document.querySelector('#text-area').value
+  let { name, email, message } = data
+  name = document.querySelector('#input-name').value
+  email = document.querySelector('#input-email').value
+  message = document.querySelector('#text-area').value
   console.log(data)
   contactOverlay.classList.remove('openContact')
 })
